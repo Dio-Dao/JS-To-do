@@ -30,7 +30,9 @@ function todoList() {
       out.insertAdjacentHTML(
         "beforeend",
         `<div class='todo'  data-value="${key}">
-        <input type ='checkbox' class='todo_checkbox' ${x[key].check == true ? "checked" : ""} data-value="${key}"></input>
+        <input type ='checkbox' id = "todo_checkbox-${key}" class='custom-checkbox todo_checkbox'
+        ${x[key].check == true ? "checked" : ""} data-value="${key}"></input>
+        <label for="todo_checkbox-${key}" class="label_checkbox"> </label>
        <div class="small_btn todo_edit"></div>
        <div class="small_btn todo_delete"></div>
         <div class="todo_field" data-value="${key}">${x[key].todo}</div><div>`
@@ -138,19 +140,21 @@ function todoList() {
   let ch_inprogress = document.querySelector('.check_inprogress')
   ch_done.addEventListener('change', ch_change)
   ch_inprogress.addEventListener('change', ch_change)
+  ch_done.addEventListener('click', clear_finder)
+  ch_inprogress.addEventListener('click', clear_finder)
   function ch_change() {
     if (ch_done.checked && !ch_inprogress.checked) {
       out(todoList.filter((x) => x.check == true))
-      document.querySelector('.inp_finder').value = ''
-
     }
     else if (ch_inprogress.checked && !ch_done.checked) {
       out(todoList.filter((x) => x.check == false))
-      document.querySelector('.inp_finder').value = ''
     }
     else {
       out(todoList)
     }
+  }
+  function clear_finder() {
+    document.querySelector('.inp_finder').innerText = ''
   }
   // ---------------------------- Main filter
   function main_filter() {
