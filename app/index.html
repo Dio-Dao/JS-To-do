@@ -22,18 +22,18 @@
             </div>
         </div>
         <div class="finder">
-            <input type="text" class='inp_finder' placeholder="Что ищем?">
-            <div class=" finder_in-progress">
-                <input type="checkbox" id="check_inprogress" class="check_inprogress"><label
-                    for="check_inprogress">Невыполненные</label>
-            </div>
-            <div class="finder_done">
-                <input type="checkbox" id="check_done" class="check_done">
-                <label for="check_done">Выполненные</label>
+            <div class='inp_finder' contenteditable="true" data-placeholder="Что нужно сделать?"></div>
+            <div class="checkboxes">
+                <div class=" finder_in-progress">
+                    <input type="checkbox" id="check_inprogress" class="check_inprogress"><label
+                        for="check_inprogress">Невыполненные</label>
+                </div>
+                <div class="finder_done">
+                    <input type="checkbox" id="check_done" class="check_done">
+                    <label for="check_done">Выполненные</label>
+                </div>
             </div>
         </div>
-
-
         <div class="out"></div>
     </div>
 

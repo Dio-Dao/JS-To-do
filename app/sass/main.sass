@@ -107,7 +107,6 @@ body
     align-items: center;
     position: relative
     padding: 2px 360px 6px 2px
-    transform: translate() easy
 .finder_done,.finder_in-progress,.finder_all
     display: block
     display: flex
@@ -115,16 +114,19 @@ body
     margin-right: 20px
     margin-top: 2px
 .inp_finder
-    // height: 10px
     margin-right: 20px
-.check_inprogress,.check_done,.check_all
+.finder_in-progress,.finder_done
+    align-items: center;
+.check_inprogress,.check_done
+    display: block
     margin-right: 10px
     margin-top: 3px
 .display
     display: flex
 .hide 
     display: none;
-
+.checkboxes
+    display: flex
 .todo:focus
     background-color: rgb(255, 255, 255)
 input[type=checkbox] 
@@ -137,3 +139,13 @@ input[type=checkbox]
     color: #595959;;
 mark 
     background: yellow;
+@media ( max-width:600px )
+    .finder
+        flex-wrap: wrap;
+        padding: 2px 22px 6px 2px;
+    .inp_finder
+    .check_done,.check_inprogress
+        margin: 10px
+@media ( max-width:420px )
+    .checkboxes
+        flex-wrap: wrap;
