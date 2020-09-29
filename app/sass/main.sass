@@ -36,17 +36,17 @@ body
 .buttons
     display: flex
     justify-content: space-around
-    flex-flow: column;
-    align-items: center;
+    flex-flow: column
+    align-items: center
     padding: 15px
 .task2
     padding-right: 23px
     width: 100%
 .todo_field,.inp_finder,.todo_field-first,.inp_finder
     white-space: pre-wrap
-    word-break: break-word;
-    background: #fff;
-    font-size: 14px;
+    word-break: break-word
+    background: #fff
+    font-size: 14px
     line-height: 14px
     min-width: 100%
     max-width: 100%
@@ -60,28 +60,28 @@ body
 .todo_field-first
     min-height: 100px
 .small_btn
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    top: 9px;
-    border-radius: 4px;
-    border: 1px solid #000;
+    width: 23px
+    height: 23px
+    position: absolute
+    top: 9px
+    border-radius: 4px
+    border: 1px solid #000
     opacity: 0.6
     &:hover
         opacity: 0.8
 .todo_checkbox
-    position: absolute;
-    right: 77px;
-    top: 15px;
+    position: absolute
+    right: 77px
+    top: 15px
     // border: 0.1px solid black
 .todo_edit,
-    right: 38px;
-    background: url(../img/src/pen.png) center no-repeat;
-    background-size: 50px;
+    right: 38px
+    background: url(../img/src/pen.png) center no-repeat
+    background-size: 50px
 .todo_delete
-    right: 5px;
-    background: url(../img/src/delete.png) center no-repeat;
-    background-size: 24px;
+    right: 5px
+    background: url(../img/src/delete.png) center no-repeat
+    background-size: 24px
 .done
     background-color: #deffca
 .active
@@ -105,7 +105,7 @@ body
 .finder
     display: none
     justify-content: space-between
-    align-items: center;
+    align-items: center
     position: relative
     padding: 2px 360px 6px 2px
 .finder_done,.finder_in-progress,.finder_all
@@ -117,7 +117,7 @@ body
 .inp_finder
     margin-right: 20px
 .finder_in-progress,.finder_done
-    align-items: center;
+    align-items: center
 .check_inprogress,.check_done
     display: block
     margin-right: 10px
@@ -125,28 +125,31 @@ body
 .display
     display: flex
 .hide 
-    display: none;
+    display: none
 .checkboxes
     display: flex
 .todo:focus
     background-color: rgb(255, 255, 255)
 input[type=checkbox] 
-    transform: scale(2);
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    padding: 10px;
+    transform: scale(2)
+    -ms-transform: scale(2)
+    -webkit-transform: scale(2)
+    padding: 10px
 [data-placeholder]:empty:before 
-    content: attr(data-placeholder);
-    color: #595959;;
+    content: attr(data-placeholder)
+    color: #595959
 mark 
-    background: yellow;
+    background: yellow
 @media ( max-width:600px )
     .finder
-        flex-wrap: wrap;
-        padding: 2px 22px 6px 2px;
+        flex-wrap: wrap
+        padding: 2px 22px 6px 2px
     .inp_finder
     .check_done,.check_inprogress
         margin: 10px
 @media ( max-width:420px )
     .checkboxes
-        flex-wrap: wrap;
+        flex-wrap: wrap
+    .btn 
+        width: 74px
+        font-size: 10px
