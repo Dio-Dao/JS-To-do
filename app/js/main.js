@@ -155,7 +155,7 @@ function todoList() {
   // ---------------------------- Main filter
   function main_filter() {
     document.querySelector('.inp_finder').oninput = function () {
-      let val = this.value.toLowerCase().trim();
+      let val = this.innerText.toLowerCase().trim();
       let ta = document.querySelectorAll('.todo_field');
       if (val != "") {
         ta.forEach(function (x) {
