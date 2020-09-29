@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="task">
+            <div class="task2">
+                <div class="todo_field-first" contenteditable="true" data-placeholder="Что нужно сделать?"></div>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-add">Добавить</button>
+                <button class="btn btn-reset">Очистить все</button>
+                <button class="btn btn-finder">Поиск</button>
+            </div>
+        </div>
+        <div class="finder">
+            <input type="text" class='inp_finder' placeholder="Что ищем?">
+            <div class=" finder_in-progress">
+                <input type="checkbox" id="check_inprogress" class="check_inprogress"><label
+                    for="check_inprogress">Невыполненные</label>
+            </div>
+            <div class="finder_done">
+                <input type="checkbox" id="check_done" class="check_done">
+                <label for="check_done">Выполненные</label>
+            </div>
+        </div>
+
+
+        <div class="out"></div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
